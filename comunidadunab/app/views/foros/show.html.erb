@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @foro.id %>
+</p>
+
+<p>
+  <strong>Anuncio:</strong>
+  <%= @foro.anuncio %>
+</p>
+
+<p>
+  <strong>Foro:</strong>
+  <%= @foro.foro %>
+</p>
+
+<%= link_to 'Edit', edit_foro_path(@foro) %> |
+<%= link_to 'Back', foros_path %>
