@@ -1,6 +1,6 @@
 class CreateProfesors < ActiveRecord::Migration[6.0]
   def change
-    create_table :profesors, :id => false do |t|
+    create_table :profesors do |t|
       t.primary_key :id
       t.string :nombre
       t.string :apellido
