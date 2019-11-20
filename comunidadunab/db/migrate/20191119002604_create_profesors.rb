@@ -1,7 +1,7 @@
 class CreateProfesors < ActiveRecord::Migration[6.0]
   def change
-    create_table :profesors do |t|
-      t.primary_key :id
+    create_table :profesor do |t|
+      t.integer :id
       t.string :nombre
       t.string :apellido
       t.string :email
