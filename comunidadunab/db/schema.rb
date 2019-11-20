@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_19_040145) do
+ActiveRecord::Schema.define(version: 2019_11_20_060119) do
+
+  create_table "alumno_cursos", force: :cascade do |t|
+    t.integer "alumno_id"
+    t.integer "curso_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "alumnos", force: :cascade do |t|
     t.string "nombre"
@@ -22,6 +29,13 @@ ActiveRecord::Schema.define(version: 2019_11_19_040145) do
   end
 
   create_table "asistes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "curso_seccions", force: :cascade do |t|
+    t.integer "curso_id"
+    t.integer "seccion_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -57,6 +71,13 @@ ActiveRecord::Schema.define(version: 2019_11_19_040145) do
   end
 
   create_table "perteneces", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "profesor_seccions", force: :cascade do |t|
+    t.integer "profesor_id"
+    t.integer "seccion_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

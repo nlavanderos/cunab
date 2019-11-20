@@ -1,9 +1,9 @@
 class CreateForos < ActiveRecord::Migration[6.0]
   def change
-    create_table :foros, :id => false do |t|
-      t.primary_key :id
+    create_table :foros do |t|
+      t.integer :id
       t.string :anuncio
-      t.string :foro
+      t.string :titulo
 
       t.timestamps
     end

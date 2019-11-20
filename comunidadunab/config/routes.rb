@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :curso_seccions
+  resources :profesor_seccions
+  resources :alumno_cursos
         devise_for :users
   #get 'bienvenido/index'
 devise_scope :user do

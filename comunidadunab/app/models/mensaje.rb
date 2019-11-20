@@ -1,3 +1,3 @@
 class Mensaje < ApplicationRecord
-has_one :foro
+  belongs_to :foro
 end

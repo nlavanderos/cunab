@@ -1,7 +1,7 @@
 class CreateCursos < ActiveRecord::Migration[6.0]
   def change
-    create_table :cursos, :id => false do |t|
-      t.primary_key :id
+    create_table :curso do |t|
+      t.integer :id
       t.string :nombre
       t.integer :periodo
 
@@ -9,3 +9,4 @@ class CreateCursos < ActiveRecord::Migration[6.0]
     end
   end
 end
+    #create_table :cursos, :id => false do |t|
